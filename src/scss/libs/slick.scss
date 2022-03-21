@@ -1,0 +1,28 @@
+@import "../../../node_modules/slick-carousel/slick/slick.scss";
+
+
+.slider {
+
+  &__item {
+    max-width: 100%;
+    height: 590px;
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.26);
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+}

@@ -57,6 +57,7 @@ body {
   max-width: $maxWidthContainer + px;
   margin: 0 auto;
   padding: 0 15px;
+  box-sizing: content-box;
   // @media (max-width: $md1) {
   // 	max-width: 970px;
   // }
@@ -76,4 +77,8 @@ body {
 
 
 @import './block/_header.scss';
+
+@import './libs/slick.scss';
+@import './block/logo.scss';
+
 @import './block/_footer.scss';
