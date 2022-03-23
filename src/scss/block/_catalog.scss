@@ -60,7 +60,7 @@
   // .catalog__products
   &__products {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 286px);
+    grid-template-columns: repeat(auto-fill, minmax(160px, 286px));
     grid-column-gap: 18px;
     grid-row-gap: 25px;
     justify-content: center;
@@ -72,10 +72,28 @@
     cursor: pointer;
     position: relative;
 
+    display: flex;
+    flex-direction: column;
+
     &_twocolumn {
       position: relative;
-      grid-column-start: 1;
-      grid-column-end: 3;
+      grid-column: span 2
+    }
+
+    @media (max-width: 620px) {
+      &_twocolumn {
+        position: relative;
+        grid-column: span 1;
+        min-height: 412px;
+
+        & .catalog__goods-image_big {
+          height: 100%;
+          & img {
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
     }
 
     &-basket {
@@ -120,35 +138,6 @@
       }
     }
 
-    // &:not(:first-child)::after {
-    //   content: '';
-    //   position: absolute;
-    //   top: 24px;
-    //   right: 27px;
-    //   width: 24px;
-    //   height: 24px;
-    //   border-radius: 50%; 
-    //   background: url('@img/icons/goods/+.svg') 0 0 / contain no-repeat;
-
-    //   &:hover {
-    //     width:72px;
-    //   }
-
-    // }
-
-    // &:not(:first-child):hover {
-
-    //   &::before { 
-    //     content: '';
-    //     position: absolute;
-    //     top: 24px;
-    //     right: 27px;
-    //     width: 24px;
-    //     height: 24px;
-    //     border-radius: 50%; 
-    //     background-color: #ff0000;
-    //   }
-    // }
   }
 
   // .catalog__goods-image
@@ -162,18 +151,26 @@
     justify-content: center;
     margin-bottom: 12px;
 
+    max-width: 100%;
+
+    &_jpg {
+      width: 100%;
+    }
+
     &_inst {
+      max-width: 100%;
+
       & img {
+        width: 100%;
         border-radius: 16px;
       }
     }
-
 
     &_big {
       max-width: 100%;
       position: relative;
 
-      &::after {
+      &::before {
         content: '';
         position: absolute;
         top: 0;
@@ -193,9 +190,13 @@
 
   // .catalog__goods-info
   &__goods-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
     &_about {
       position: absolute;
       bottom: 28px;
+      z-index: 10;
 
       padding-left: 26px;
       padding-right: 42px;
@@ -213,6 +214,7 @@
     font-size: 14px;
     line-height: 28px;
     color: #ffffff;
+    flex: 1 0 auto;
 
     &_about {
       position: relative;
