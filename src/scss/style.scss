@@ -76,11 +76,14 @@ body {
 // **********************************************************************
 
 
-@import './block/_header.scss';
+@import './block/header';
 
-@import './libs/slick.scss';
-@import './block/logo.scss';
-@import './block/catalog.scss';
-@import './block/mailing.scss';
+@import './libs/slick';
+@import './block/logo';
+@import './block/catalog';
+@import './block/mailing';
+@import './block/actual';
+@import './block/about';
+@import './block/interesting';
 
-@import './block/_footer.scss';
+@import './block/footer';
