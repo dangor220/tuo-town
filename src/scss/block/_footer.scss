@@ -1,0 +1,28 @@
+.footer {
+  padding: 32px 0;
+
+  // .footer__wrapper
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  // .footer__copyright
+  &__copyright {
+    font-size: 12px;
+    line-height: 175%;
+    color: #FFFFFF;
+    opacity: 0.5;
+  }
+
+  // .footer__develop
+  &__develop {}
+
+  // .footer__github
+  &__github {
+    font-size: 14px;
+    line-height: 175%;
+    color: #FFFFFF;
+    opacity: 0.5;
+  }
+}

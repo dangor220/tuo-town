@@ -4,10 +4,6 @@
   & .title__intresting {
     margin-bottom: 37px;
   }
-
-  // .intresting__wrapper
-  &__wrapper {}
-
   // .intresting__article
   &__article {
     grid-template-columns: repeat(auto-fill, minmax(100px, 380px));
@@ -55,12 +51,7 @@
   }
 }
 
-.container {}
-
 .catalog {
-
-  // .catalog__products
-  &__products {}
 
   // .catalog__goods
   &__goods {
@@ -86,26 +77,5 @@
 
 
     }
-  }
-
-  // .catalog__goods-image
-  &__goods-image {
-
-    // .catalog__goods-image_big
-    &_big {}
-  }
-
-  // .catalog__goods-info
-  &__goods-info {
-
-    // .catalog__goods-info_about
-    &_about {}
-  }
-
-  // .catalog__goods-name
-  &__goods-name {
-
-    // .catalog__goods-name_about
-    &_about {}
   }
 }

@@ -25,7 +25,6 @@
   &__image {
     text-align: center;
     margin-bottom: 31px;
-
   }
 
   // .catalog__text
@@ -134,7 +133,6 @@
     &:hover {
       & .catalog__goods-buy {
         background: #ff0000;
-
       }
     }
 
@@ -159,7 +157,6 @@
 
     &_inst {
       max-width: 100%;
-
       & img {
         width: 100%;
         border-radius: 16px;
@@ -231,9 +228,6 @@
       }
 
     }
-
-
-
   }
 
   // .catalog__goods-price

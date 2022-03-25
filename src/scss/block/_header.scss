@@ -17,9 +17,6 @@
   }
 }
 .menu {
-  // .menu__nav
-  &__nav {
-  }
   // .menu__list
   &__list {  
     display: flex;
@@ -55,17 +52,8 @@
     display: flex;
     justify-content: center;
   }
-  // .logo__link
-  &__link {
-  }
-  // .logo__image
-  &__image {
-  }
 }
 .user {
-  // .user__nav
-  &__nav {
-  }
   // .user__list
   &__list {
     display: flex;
@@ -77,9 +65,6 @@
     &:first-child {
       margin-left: 0;
     }
-  }
-  // .user__link
-  &__link {
   }
   // .user__icon
   &__icon {

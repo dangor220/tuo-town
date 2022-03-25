@@ -1,9 +1,6 @@
 .actual {
   padding: 60px 0;
   border-bottom: 1px solid #ffffff34;
-  // .actual__wrapper
-  &__wrapper {
-  }
   // .actual__tabs
   &__tabs {
     display: flex;
@@ -18,7 +15,6 @@
     &_active {
       color: #ffffff;
       padding-bottom: 7px;
-      // border-bottom: 2px solid #C80000;
       position: relative;
 
       &::before {
@@ -47,9 +43,6 @@
   &__tab-new {
     margin-right: 53px;
   
-  }
-  // .actual__tabs-popular
-  &__tabs-popular {
   }
   // .actual__news
   &__content {
