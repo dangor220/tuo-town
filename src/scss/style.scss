@@ -109,7 +109,13 @@ body {
       background: rgba(0, 0, 0, 0.623);
       filter: brightness(10);
     }
+    
+    @media (max-width: 767px) {
+        overflow: hidden;
+      }
+
   }
 
+  
 
 }
