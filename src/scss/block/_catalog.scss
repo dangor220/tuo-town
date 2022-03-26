@@ -5,12 +5,25 @@
   &__tabs {
     display: flex;
     justify-content: space-around;
+    margin-bottom: 88px;
+    @media (max-width: 600px) {
+      flex-wrap: wrap;
+    }
   }
 
   // .catalog__item
   &__item {
+    
     cursor: pointer;
-    margin-bottom: 88px;
+
+    @media (max-width: 600px) {
+      min-width: 201px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
 
     &:hover {
       & .catalog__text {
@@ -25,6 +38,8 @@
   &__image {
     text-align: center;
     margin-bottom: 31px;
+
+
   }
 
   // .catalog__text
@@ -60,9 +75,23 @@
   &__products {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(160px, 286px));
-    grid-column-gap: 18px;
-    grid-row-gap: 25px;
+    // grid-column-gap: 18px;
+    // grid-row-gap: 25px;
+
+    grid-gap: 1rem;
     justify-content: center;
+
+    @media (max-width: 767px) {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    @media (max-width: 620px) {
+      grid-template-columns: repeat(auto-fit, minmax(152px, 1fr));
+    }
+
+    @media (max-width: 456px) {
+      grid-template-columns: repeat(auto-fit, minmax(152px, 286px));
+    }
   }
 
   // .catalog__goods
@@ -81,12 +110,27 @@
 
     @media (max-width: 620px) {
       &_twocolumn {
-        position: relative;
+        min-height: 412px;
+
+        & .catalog__goods-image_big {
+          height: 100%;
+
+          & img {
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 456px) {
+      &_twocolumn {
         grid-column: span 1;
         min-height: 412px;
 
         & .catalog__goods-image_big {
           height: 100%;
+
           & img {
             height: 100%;
             object-fit: cover;
@@ -151,15 +195,36 @@
 
     max-width: 100%;
 
+    @media (max-width: 525px) {
+      min-height: 330px;
+    }
+
+    & img {
+      width: 100%;
+    }
+
     &_jpg {
       width: 100%;
     }
 
     &_inst {
       max-width: 100%;
+
+      & picture {
+        @media (max-width: 456px) {
+          width: 100%;
+        }
+      }
+
       & img {
-        width: 100%;
+        height: 412px;
+        object-fit: cover;
         border-radius: 16px;
+        width: 100%;
+
+        @media (max-width: 525px) {
+          height: 330px;
+        }
       }
     }
 
@@ -190,6 +255,7 @@
     display: flex;
     flex-direction: column;
     flex: 1 0 auto;
+
     &_about {
       position: absolute;
       bottom: 28px;
@@ -215,6 +281,7 @@
 
     &_about {
       position: relative;
+      padding-right: 20px;
 
       &::after {
         content: '';
@@ -225,6 +292,7 @@
         height: 8px;
         position: absolute;
         background: url("@img/icons/logo/next.svg") 0 0 / contain no-repeat;
+
       }
 
     }
@@ -262,5 +330,13 @@
     color: #FFFFFF;
     margin-left: 18px;
     text-transform: uppercase;
+
+    @media (max-width: 525px) {
+      font-size: 15px;
+    }
+  }
+
+  @media (max-width: 525px) {
+    right: 10px;
   }
 }

@@ -8,12 +8,24 @@
   &__article {
     grid-template-columns: repeat(auto-fill, minmax(100px, 380px));
     grid-column-gap: 28px;
+
+    @media (max-width: 767px) {
+      grid-column-gap: 30px;
+      grid-template-columns: repeat(auto-fit, 100%);
+    }
+    @media (max-width: 620px) {
+      grid-template-columns: repeat(auto-fit, 100%);
+    }
   }
 
   // .intresting__image
   &__image {
     overflow: hidden;
     border-radius: 16px;
+
+    @media (max-width: 767px) {
+      border-radius: 26px;
+    }
 
     & img {
       transition: all 0.3s linear;
@@ -58,6 +70,11 @@
 
     // .catalog__goods_onecolumn
     &_onecolumn {
+
+      @media (max-width: 767px) {
+        max-height: 465px;
+      }
+
       &:hover {
         & .intresting__image {
 

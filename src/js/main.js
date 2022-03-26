@@ -7,3 +7,10 @@ $(".slider").slick({
   appendDots: $('.logo__elem-slider'),
   swipe: false,
 });
+
+
+
+// import menu
+import * as menu from "./module/menu.js";
+
+menu.showMenu()

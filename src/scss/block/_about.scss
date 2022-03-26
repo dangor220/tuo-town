@@ -2,16 +2,47 @@
   padding: 60px 0;
   border-bottom: 1px solid #ffffff34;
 
+
   // .about__legends
   &__legends {
     display: flex;
-    padding: 0 -40px;
+    margin-left: -80px;
+
     margin-bottom: 39px;
+
+    @media (max-width: 767px) {
+      margin-left: -30px;
+    }
+    @media (max-width: 600px) {
+      flex-wrap: wrap;
+    }
   }
 
   // .about__image
   &__image {
-    margin-right: 40px;
+    margin-left: 80px;
+
+    @media (max-width: 767px) {
+      max-width: 100%;
+      margin-left: 30px;
+      flex: 1 1 50%;
+      & img {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 600px) {
+      margin-bottom: 30px;
+      width: 300px;
+      height: 300px;
+
+      & img {
+        border-radius: 27px;
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+      }
+    }
 
     & img {
       border-radius: 17px;
@@ -20,11 +51,21 @@
 
   // .about__descr
   &__descr {
-    margin-left: 40px;
+    margin-left: 80px;
+
+    @media (max-width: 767px) {
+      margin-left: 30px;
+      flex: 1 1 50%;
+    }
+
+    
   }
 
   // .about__title
   &__title {
+    @media (max-width: 767px) {
+      font-size: 24px;
+    }
 
     &_mt {
       font-size: 28px;
@@ -40,6 +81,10 @@
 
       max-width: 580px;
       margin-bottom: 51px;
+
+      @media (max-width: 767px) {
+        margin-bottom: 25px;
+      }
     }
   }
 
@@ -60,23 +105,69 @@
       &:last-child {
         margin-top: 27px;
       }
+
+      @media (max-width: 767px) {
+        font-size: 14px;
+        color: #ADACAC;
+      }
     }
   }
 
   // .about__main-tools
   &__main-tools {
     display: flex;
-    padding: 0 -40px;
+
+    margin-left: -80px;
+
+    @media (max-width: 767px) {
+      margin-left: -30px;
+    }
+
+    @media (max-width: 600px) {
+      flex-wrap: wrap;
+    }
 
     & .about__image {
-      margin-left: 40px;
-      margin-right: 0;
+      margin-left: 80px;
+
+       @media (max-width: 600px) {
+     order: 1;
+    }
+
+      @media (max-width: 767px) {
+        margin-left: 30px;
+        flex: 1 1 50%;
+      }
     }
 
     // .about__descr
     & .about__descr {
-      margin-right: 40px;
-      margin-left: 0;
+      margin-left: 80px;
+
+       @media (max-width: 600px) {
+     order: 2;
+    }
+
+      @media (max-width: 767px) {
+        display: flex;
+        flex-direction: column;
+        margin-left: 30px;
+        flex: 1 1 50%;
+
+        & .about__subtitle {
+          order: 2;
+
+      
+        }
+
+        & .about__title_mt {
+          margin-top: 0;
+          margin-bottom: 25px;
+          order: 1;
+
+         
+        }
+      }
     }
   }
 }

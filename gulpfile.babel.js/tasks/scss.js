@@ -27,11 +27,9 @@ export const scss = () => {
 		.pipe(autoprefixer())
 		.pipe(shorthand())
 		.pipe(groupCssMediaQueries())
-		// .pipe(app.plugins.size({ title: "main.css" }))
 		.pipe(app.gulp.dest(app.path.build.css, { sourcemaps: app.plugins.isDev }))
 		.pipe(app.plugins.rename({ suffix: ".min" }))
 		.pipe(csso())
-		// .pipe(app.plugins.size({ title: "main.min.css" }))
 		.pipe(app.gulp.dest(app.path.build.css, { sourcemaps: app.plugins.isDev }))
 		.pipe(app.plugins.browsersync.stream());
 };
