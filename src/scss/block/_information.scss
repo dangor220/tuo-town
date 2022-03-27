@@ -213,6 +213,9 @@
     margin-bottom: 9px;
     font-size: 20px;
     font-weight: 600;
+    & a {
+      color: #FFFFFF;
+    }
 
     @media (max-width: 767px) {
       font-size: 15px;
@@ -227,6 +230,9 @@
     line-height: 136%;
     color: #FFFFFF;
     margin-bottom: 30px;
+    & a {
+      color: #FFFFFF;
+    }
 
     @media (max-width: 767px) {
       order: 2;
