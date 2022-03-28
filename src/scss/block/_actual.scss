@@ -2,6 +2,7 @@
   padding: 60px 0;
   border-bottom: 1px solid #ffffff34;
   // .actual__tabs
+
   &__tabs {
     display: flex;
     justify-content: center;
@@ -12,9 +13,10 @@
     font-weight: 600;
     color: #818181;
     transition: all 0.3s linear;
+    text-transform: uppercase;
+    padding-bottom: 7px;
     &_active {
       color: #ffffff;
-      padding-bottom: 7px;
       position: relative;
 
       &::before {

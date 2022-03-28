@@ -36,7 +36,7 @@ eval("var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPAC
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! slick-carousel */ \"./node_modules/slick-carousel/slick/slick.js\");\n/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(slick_carousel__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _module_menu_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./module/menu.js */ \"./src/js/module/menu.js\");\n\r\n\r\n\r\njquery__WEBPACK_IMPORTED_MODULE_0___default()(\".slider\").slick({\r\n  dots: true,\r\n  appendArrows: jquery__WEBPACK_IMPORTED_MODULE_0___default()('.logo__elem-slider'),\r\n  appendDots: jquery__WEBPACK_IMPORTED_MODULE_0___default()('.logo__elem-slider'),\r\n  swipe: false,\r\n});\r\n\r\n\r\n\r\n// import menu\r\n\r\n\r\n_module_menu_js__WEBPACK_IMPORTED_MODULE_2__.showMenu()\n\n//# sourceURL=webpack://gulp-build/./src/js/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! slick-carousel */ \"./node_modules/slick-carousel/slick/slick.js\");\n/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(slick_carousel__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _module_menu_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./module/menu.js */ \"./src/js/module/menu.js\");\n/* harmony import */ var _module_tabsActual_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./module/tabsActual.js */ \"./src/js/module/tabsActual.js\");\n/* harmony import */ var _module_spoiler_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./module/spoiler.js */ \"./src/js/module/spoiler.js\");\n\r\n\r\n\r\njquery__WEBPACK_IMPORTED_MODULE_0___default()(\".slider\").slick({\r\n  dots: true,\r\n  appendArrows: jquery__WEBPACK_IMPORTED_MODULE_0___default()('.logo__elem-slider'),\r\n  appendDots: jquery__WEBPACK_IMPORTED_MODULE_0___default()('.logo__elem-slider'),\r\n  swipe: false,\r\n});\r\n\r\n\r\n\r\n// import menu\r\n\r\n\r\n_module_menu_js__WEBPACK_IMPORTED_MODULE_2__.showMenu()\r\n\r\n// import changeTabs for actual\r\n;\r\n\r\n_module_tabsActual_js__WEBPACK_IMPORTED_MODULE_3__.changeTab()\r\n\r\n// import spoiler for info\r\n;\r\n\r\n_module_spoiler_js__WEBPACK_IMPORTED_MODULE_4__.spoiler()\n\n//# sourceURL=webpack://gulp-build/./src/js/main.js?");
 
 /***/ }),
 
@@ -48,6 +48,28 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jque
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"showMenu\": function() { return /* binding */ showMenu; }\n/* harmony export */ });\nfunction showMenu() {\r\n\r\n  const headerBlur = document.querySelector('.header');\r\n  const bodyActive = document.querySelector('body');\r\n\r\n  const menu = document.querySelector('.menu__item_catalog');\r\n  const menuItem = document.querySelector('.menu__catalog');\r\n  const menuArrow = document.querySelector('.menu__arrow');\r\n\r\n  menuArrow.addEventListener('click', (e) => {\r\n    console.log(e.target);\r\n    menuItem.classList.remove('menu__catalog_show');\r\n    headerBlur.classList.remove('header__blur_disabled');\r\n    bodyActive.classList.remove('body__menu_active')\r\n  })\r\n\r\n  menu.addEventListener('click', (e) => {\r\n    console.log(bodyActive);\r\n    e.preventDefault();\r\n    menuItem.classList.add('menu__catalog_show');\r\n    headerBlur.classList.add('header__blur_disabled');\r\n    bodyActive.classList.add('body__menu_active')\r\n  })\r\n\r\n  menuItem.addEventListener('click', (e) => {\r\n    if (e.target.classList.contains('menu__catalog-link') || e.target.classList.contains('menu__info-link')) {\r\n      menuItem.classList.remove('menu__catalog_show');\r\n      headerBlur.classList.remove('header__blur_disabled');\r\n      bodyActive.classList.remove('body__menu_active')\r\n    }\r\n  })\r\n  \r\n\r\n}\r\n\n\n//# sourceURL=webpack://gulp-build/./src/js/module/menu.js?");
+
+/***/ }),
+
+/***/ "./src/js/module/spoiler.js":
+/*!**********************************!*\
+  !*** ./src/js/module/spoiler.js ***!
+  \**********************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"spoiler\": function() { return /* binding */ spoiler; }\n/* harmony export */ });\nfunction spoiler() {\r\n\r\n  const navInfo = document.querySelectorAll('.social__navigation');\r\n  const contactInfo = document.querySelector('.contact__wrapper');\r\n\r\n  if (window.innerWidth <= 425) {\r\n    \r\n    navInfo.forEach(elem => {\r\n      elem.classList.add('social__navigation_hide')\r\n    })\r\n    contactInfo.classList.add('social__navigation_hide')\r\n    \r\n  }\r\n}\n\n//# sourceURL=webpack://gulp-build/./src/js/module/spoiler.js?");
+
+/***/ }),
+
+/***/ "./src/js/module/tabsActual.js":
+/*!*************************************!*\
+  !*** ./src/js/module/tabsActual.js ***!
+  \*************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"changeTab\": function() { return /* binding */ changeTab; }\n/* harmony export */ });\nfunction changeTab() {\r\n\r\n  const actualTabs = document.querySelector('.actual__tabs');\r\n  const allTabs = document.querySelectorAll('.actual__tab');\r\n\r\n  const actualContent = document.querySelectorAll('.actual__content');\r\n\r\n\r\n  actualTabs.addEventListener('click', (e) => {\r\n\r\n\r\n    let tabValue = e.target.dataset.tab;\r\n\r\n\r\n    if (e.target.classList.contains('actual__tab')) {\r\n      allTabs.forEach(elem => {\r\n        elem.classList.remove('actual__tab_active');\r\n      })\r\n\r\n\r\n      e.target.classList.add('actual__tab_active');\r\n\r\n      actualContent.forEach(item => {\r\n        if (item.dataset.tab === tabValue) {\r\n          item.classList.add('actual__content_active');\r\n          \r\n        } else {\r\n          item.classList.remove('actual__content_active');\r\n        }\r\n      })\r\n    }\r\n  })\r\n\r\n}\n\n//# sourceURL=webpack://gulp-build/./src/js/module/tabsActual.js?");
 
 /***/ })
 

@@ -15,6 +15,7 @@
   &__item {
     
     cursor: pointer;
+    
 
     @media (max-width: 600px) {
       min-width: 201px;
@@ -26,9 +27,14 @@
     }
 
     &:hover {
+      
       & .catalog__text {
         color: #ff0000;
         opacity: 1;
+      }
+
+      & .catalog__image {
+        transform: scale(1.1);
       }
 
     }
@@ -38,7 +44,7 @@
   &__image {
     text-align: center;
     margin-bottom: 31px;
-
+    transition: all 0.3s linear;
 
   }
 

@@ -40,8 +40,6 @@
 }
 
 .menu {
-
-
   // .menu__list
   &__list {
     display: flex;
@@ -55,6 +53,10 @@
     width: 44px;
     height: 44px;
     cursor: pointer;
+
+    @media (max-width: 375px) {
+      left: 15px;
+    }
   }
 
   // .menu__item
@@ -115,17 +117,41 @@
     position: absolute;
     top: 0;
     left: -1000px;
-    max-width: 444px;
+    max-width: 500px;
     height: 100vh;
     z-index: 99999;
-    padding: 115px 48px 115px 48px;
+    padding: 115px 48px;
     backdrop-filter: blur(25px);
     overflow-y: auto;
     transition: all 0.3s linear;
 
+    @media (max-width: 425px) {
+    width: 100%;
+    }
+    @media (max-width: 375px) {
+      padding: 115px 15px;
+    }
+
     &_show {
       left: 0;
     }
+
+    &-user {
+      display: none !important;
+      
+      @media (max-width: 425px) {
+        position: absolute;
+        top: 40px;
+        right: 48px;
+        display: flex !important;
+      }
+
+      @media (max-width: 375px) {
+        right: 15px;
+      }
+    }
+
+   
 
 
   }
@@ -153,6 +179,10 @@
     text-transform: uppercase;
 
     color: #FFFFFF;
+
+    @media (max-width: 375px) {
+     font-size: 16px;
+    }
   }
 
   // .menu__info-list
