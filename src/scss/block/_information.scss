@@ -123,6 +123,12 @@
       @media (max-width: 767px) {
         margin-bottom: 30px;
       }
+      @media (max-width: 425px) {
+        & .social__item-title {
+          margin-bottom: 13px;
+        }
+        display: block;
+      }
 
       & .social__item-title {
         margin-bottom: 0;
@@ -154,6 +160,27 @@
     margin-bottom: 13px;
     font-size: 17px;
     font-weight: 600;
+    cursor: pointer;
+
+    @media (max-width: 425px) {
+     padding-left: 30px;
+     position: relative;
+     &::before {
+       content: '';
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 20px;
+       height: 20px;
+       background: url('@img/page__catalog/icons/down.svg');
+     }
+     &_active {
+      &::before {
+        transition: all 0.3s linear;
+        transform: rotate(180deg);
+      }
+     }
+    }
   }
 
   // .social__list
@@ -161,13 +188,15 @@
     display: flex;
     flex-wrap: wrap;
   }
+  &__navigation {
+    @media (max-width: 425px) {
+      display: none;
 
-  // &__navigation {
-
-  //   &_hide {
-  //     display: none !important;
-  //   }
-  // }
+      &_show {
+        display: block;
+      }
+    }
+  }
 
   // .social__link
   &__link {

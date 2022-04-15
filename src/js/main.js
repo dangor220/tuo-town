@@ -9,18 +9,22 @@ $(".slider").slick({
 });
 
 
+ import * as menu from "./module/menu.js";
+ import * as actual from "./module/tabsActual.js"; 
+ import * as info from "./module/spoiler.js";
 
-// import menu
-import * as menu from "./module/menu.js";
-
-menu.showMenu()
-
-// import changeTabs for actual
-import * as actual from "./module/tabsActual.js";
-
-actual.changeTab()
-
-// import spoiler for info
-import * as info from "./module/spoiler.js";
-
+if (window.location.href.includes('index')) {
+  menu.showMenu()
+  actual.changeTab()
+  
+}
 info.spoiler()
+
+import * as catalog from "./module/catalog";
+
+if (window.location.href.includes('catalog')) {
+  catalog.selectProduct()
+}
+
+
+

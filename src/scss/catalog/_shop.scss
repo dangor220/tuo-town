@@ -1,0 +1,154 @@
+.shop {
+  padding: 50px 0 50px 0;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  // .shop__wrapper
+  &__wrapper {}
+
+  // .shop__content
+  &__content {
+    display: flex;
+  }
+
+  // .shop__column
+  &__column {
+
+    &_menu {
+      flex: 0 0 25%;
+    }
+
+    &_product {
+      flex: 0 0 75%;
+    }
+  }
+
+  // .shop__menu
+  &__menu {}
+
+  // .shop__item
+  &__item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.204);
+    margin-bottom: 40px;
+    max-width: 95%;
+  }
+
+  // .shop__item-name
+  &__item-name {
+    position: relative;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+
+    color: #ADACAC;
+    cursor: pointer;
+
+    margin-bottom: 40px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      width: 20px;
+      height: 20px;
+      background: url('@img/page__catalog/icons/down.svg') 0 0 / cover no-repeat;
+      opacity: 0.5;
+    }
+
+    &_active {
+      transition: all 0.3s linear;
+      color: #FFFFFF;
+
+      &::before {
+        transition: all 0.3s linear;
+        transform: rotate(180deg) translateY(50%);
+        opacity: 1;
+      }
+    }
+
+
+
+  }
+
+  // .shop__item-list
+  &__item-list {
+    display: none;
+    margin-bottom: 40px;
+
+    &_active {
+      display: block;
+    }
+  }
+
+  // .shop__item-elem
+  &__item-elem {
+    margin-bottom: 10px;
+    & a {
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    margin-bottom: 10px;
+
+    color: #ADACAC;
+    transition: all 0.3s linear;
+    &:hover {
+      color: #FFFFFF;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+ }
+}
+
+.container {}
+
+.title {}
+
+.catalog {
+
+  // .catalog__products
+  &__products {}
+
+  // .catalog__goods
+  &__goods {}
+
+  // .catalog__goods-image
+  &__goods-image {}
+
+  // .catalog__goods-buy
+  &__goods-buy {}
+
+  // .catalog__goods-add
+  &__goods-add {}
+
+  // .catalog__goods-basket
+  &__goods-basket {}
+
+  // .catalog__goods-info
+  &__goods-info {}
+
+  // .catalog__goods-name
+  &__goods-name {}
+
+  // .catalog__goods-price
+  &__goods-price {}
+
+  // .catalog__goods-value
+  &__goods-value {}
+
+  // .catalog__goods-new
+  &__goods-new {}
+}

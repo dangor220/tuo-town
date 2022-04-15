@@ -1,0 +1,32 @@
+.house {
+  position: relative;
+  // .house__wrapper
+  &__wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  // .house__title
+  &__title {
+    font-family: 'Jura';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 120%;
+
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 40px;
+  }
+  // .house__subtitle
+  &__subtitle {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+  }
+}

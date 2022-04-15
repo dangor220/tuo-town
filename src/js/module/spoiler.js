@@ -1,14 +1,13 @@
 export function spoiler() {
 
-  const navInfo = document.querySelectorAll('.social__navigation');
-  const contactInfo = document.querySelector('.contact__wrapper');
+  const currentItem = document.querySelectorAll('.social__item-title');
 
-  if (window.innerWidth <= 425) {
-    
-    navInfo.forEach(elem => {
-      elem.classList.add('social__navigation_hide')
+
+  currentItem.forEach((elem) => {
+    elem.addEventListener('click', () => {
+      elem.classList.toggle('social__item-title_active')
+      const parent = elem.nextElementSibling;
+      parent.classList.toggle('social__navigation_show')
     })
-    contactInfo.classList.add('social__navigation_hide')
-    
-  }
+  })
 }

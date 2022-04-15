@@ -120,6 +120,10 @@
     font-style: 14px;
     font-weight: 600;
     color: #fff;
+    transition: all 0.3s linear;
 
+    &:hover {
+      background-color: #C80000;
+    }
   }
 }
