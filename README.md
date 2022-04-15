@@ -5,11 +5,11 @@
 
 ### Development of a multi-page site TuoTown
 
-### Technologies used:
+## Used technologies:
 
-#### HTML
-#### CSS/SCSS
-#### JS
+* HTML
+* CSS/SCSS
+* JS
 
-#### SlickSlider
-#### Gulp
+* SlickSlider
+* Gulp
