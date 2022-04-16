@@ -3,10 +3,26 @@ export function selectProduct() {
 
 
   currentItem.forEach((elem) => {
+
     elem.addEventListener('click', () => {
-      elem.classList.toggle('shop__item-name_active')
-      const parent = elem.nextElementSibling;
-      parent.classList.toggle('shop__item-list_active')
+
+
+      if (elem.classList.contains('shop__item-name_active')) {
+        elem.classList.remove('shop__item-name_active')
+        const parent = elem.nextElementSibling;
+        parent.classList.remove('shop__item-list_active')
+      } else {
+        currentItem.forEach((item) => {
+          item.classList.remove('shop__item-name_active')
+          const parent = item.nextElementSibling;
+          parent.classList.remove('shop__item-list_active')
+        })
+        elem.classList.add('shop__item-name_active')
+        const parent = elem.nextElementSibling;
+        parent.classList.add('shop__item-list_active')
+      }
+
+
     })
   })
 }

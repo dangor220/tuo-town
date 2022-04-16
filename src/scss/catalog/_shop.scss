@@ -1,5 +1,6 @@
 .shop {
   padding: 50px 0 50px 0;
+  min-height: 100vh;
 
   &__title {
     text-align: center;
@@ -31,6 +32,29 @@
 
   // .shop__item
   &__item {
+
+    &-link {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 140%;
+      margin-bottom: 10px;
+
+      color: #ADACAC;
+      transition: all 0.3s linear;
+      &:hover {
+        color: #FFFFFF;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &_active {
+        transition: all 0.3s linear;
+        color: #FFFFFF;
+      }
+    }
+
     border-bottom: 1px solid rgba(255, 255, 255, 0.204);
     margin-bottom: 40px;
     max-width: 95%;
@@ -92,24 +116,6 @@
   // .shop__item-elem
   &__item-elem {
     margin-bottom: 10px;
-    & a {
-
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 140%;
-    margin-bottom: 10px;
-
-    color: #ADACAC;
-    transition: all 0.3s linear;
-    &:hover {
-      color: #FFFFFF;
-    }
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
  }
 }
 
@@ -118,6 +124,14 @@
 .title {}
 
 .catalog {
+
+  &__shop-products {
+    display: none;
+
+    &_active {
+      display: grid;
+    }
+  }
 
   // .catalog__products
   &__products {}

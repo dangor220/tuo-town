@@ -9,22 +9,25 @@ $(".slider").slick({
 });
 
 
- import * as menu from "./module/menu.js";
- import * as actual from "./module/tabsActual.js"; 
- import * as info from "./module/spoiler.js";
-
-if (window.location.href.includes('index')) {
-  menu.showMenu()
-  actual.changeTab()
-  
-}
-info.spoiler()
-
+import * as menu from "./module/menu.js";
+import * as actual from "./module/tabsActual.js"; 
+import * as info from "./module/spoiler.js";
 import * as catalog from "./module/catalog";
+import * as menuShop from "./module/menuTabsShop";
+import * as follow from "./module/followLinkShop";
 
-if (window.location.href.includes('catalog')) {
+info.spoiler()
+menu.showMenu()
+follow.followLink()
+
+if (window.location.pathname=='/' || window.location.href.includes('index')) {
+  actual.changeTab()
+} else {
   catalog.selectProduct()
+  menuShop.changeTabMenu()
 }
+
+
 
 
 

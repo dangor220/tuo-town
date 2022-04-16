@@ -14,9 +14,7 @@
   // .catalog__item
   &__item {
     
-    cursor: pointer;
-    
-
+    color: #272727;
     @media (max-width: 600px) {
       min-width: 201px;
       flex-wrap: wrap;

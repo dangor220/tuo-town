@@ -8,14 +8,12 @@ export function showMenu() {
   const menuArrow = document.querySelector('.menu__arrow');
 
   menuArrow.addEventListener('click', (e) => {
-    console.log(e.target);
     menuItem.classList.remove('menu__catalog_show');
     headerBlur.classList.remove('header__blur_disabled');
     bodyActive.classList.remove('body__menu_active')
   })
 
   menu.addEventListener('click', (e) => {
-    console.log(bodyActive);
     e.preventDefault();
     menuItem.classList.add('menu__catalog_show');
     headerBlur.classList.add('header__blur_disabled');
