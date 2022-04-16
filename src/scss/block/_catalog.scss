@@ -111,7 +111,7 @@
 
     &_twocolumn {
       position: relative;
-      grid-column: span 2
+      grid-column: span 2;
     }
 
    
@@ -269,14 +269,20 @@
       position: absolute;
       bottom: 28px;
       z-index: 10;
-
-      padding-left: 26px;
-      padding-right: 42px;
       line-height: 28px;
       color: #ffffff;
       font-weight: 600;
+      opacity: 0.8;
+      padding-left: 26px;
+      padding-right: 42px;
+     
       width: 100%;
-
+      transition: all 0.3s linear;
+      
+      &:hover {
+        opacity: 1;
+      }
+      
     }
   }
 
