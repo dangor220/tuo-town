@@ -97,7 +97,9 @@
       grid-template-columns: repeat(auto-fit, minmax(152px, 286px));
     }
   }
-
+  &__good-product {
+    padding: 0 10px 0 10px;
+  }
   // .catalog__goods
   &__goods {
     border-radius: 16px;
@@ -111,6 +113,8 @@
       position: relative;
       grid-column: span 2
     }
+
+   
 
     @media (max-width: 620px) {
       &_twocolumn {

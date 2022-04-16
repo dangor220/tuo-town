@@ -6,6 +6,7 @@ $(".slider").slick({
   appendArrows: $('.logo__elem-slider'),
   appendDots: $('.logo__elem-slider'),
   swipe: false,
+  autoplay: true,
 });
 
 
