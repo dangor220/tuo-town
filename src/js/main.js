@@ -21,7 +21,7 @@ info.spoiler()
 menu.showMenu()
 follow.followLink()
 
-if (window.location.pathname=='/' || window.location.href.includes('index')) {
+if (window.location.pathname=='/' || window.location.href.includes('index') || document.querySelector('.actual')) {
   actual.changeTab()
 } else {
   catalog.selectProduct()
