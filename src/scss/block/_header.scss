@@ -239,7 +239,25 @@
 
   // .user__item
   &__item {
+    position: relative;
     margin-left: 24px;
+
+    &_active {
+        position: absolute;
+        min-width: 1.5em;
+        min-height: 1.5em;
+        background-color: #c80000;
+        border-radius: 50%;
+        color: #ffffff;
+        font-size: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        top: -5px;
+        right: -9px;
+        z-index: 10;
+    }
 
     &:first-child {
       margin-left: 0;
@@ -256,7 +274,18 @@
 
   // .user__icon
   &__icon {
+    position: relative;
     width: 23px;
     height: 23px;
+
+    &_no-active {
+      filter: brightness(50%);
+    }
+
+    &_active {
+      filter: brightness(100%);
+   
+    }
+   
   }
 }
