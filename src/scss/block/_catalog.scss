@@ -181,6 +181,20 @@
           visibility: visible;
         }
       }
+      @media (max-width: 768px) {
+          &:hover {
+            border-radius: 50%;
+            & img {
+              padding-right: 0px;
+              width: auto;
+            }
+
+            & .catalog__goods-basket {
+              visibility: hidden;
+            }
+        }
+      }
+      
     }
 
     &:hover {

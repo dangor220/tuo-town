@@ -10,7 +10,7 @@ $(".slider").slick({
 
 
 import * as menu from "./module/menu.js";
-import * as actual from "./module/tabsActual.js"; 
+import * as actual from "./module/tabsActual.js";
 import * as info from "./module/spoiler.js";
 import * as catalog from "./module/catalog";
 import * as menuShop from "./module/menuTabsShop";
@@ -20,10 +20,14 @@ import * as shop from "./module/bascket";
 info.spoiler()
 menu.showMenu()
 follow.followLink()
+shop.getBasket()
 
-if (window.location.pathname=='/' || window.location.href.includes('index') || document.querySelector('.actual')) {
+if (window.location.pathname == '/' || window.location.href.includes('index') || document.querySelector('.actual')) {
   actual.changeTab()
-  shop.getBasket()
+} else if (window.location.href.includes('basket')) {
+  shop.generateBasketPage()
+  shop.deletedProduct()
+  shop.addOrDelProduct()
 } else {
   catalog.selectProduct()
   menuShop.changeTabMenu()

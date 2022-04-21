@@ -91,13 +91,14 @@ body {
 @import './block/about';
 @import './block/interesting';
 @import './block/information';
-
 @import './block/footer';
 
 
 
 @import './catalog/house&knife';
 @import './catalog/shop';
+
+@import './basket/basket';
 
 body {
   position: relative;
