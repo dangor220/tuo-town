@@ -16,6 +16,7 @@ import * as catalog from "./module/catalog";
 import * as menuShop from "./module/menuTabsShop";
 import * as follow from "./module/followLinkShop";
 import * as shop from "./module/bascket";
+import * as city from "./module/searchCity";
 
 info.spoiler()
 menu.showMenu()
@@ -28,6 +29,8 @@ if (window.location.pathname == '/' || window.location.href.includes('index') ||
   shop.generateBasketPage()
   shop.deletedProduct()
   shop.addOrDelProduct()
+  city.searchCity();
+
 } else {
   catalog.selectProduct()
   menuShop.changeTabMenu()

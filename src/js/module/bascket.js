@@ -52,8 +52,6 @@ export function getBasket() {
         let imageProduct = elem.querySelector('.catalog__good-product');
         let priceOneProduct = elem.querySelector('.catalog__goods-value').innerText;
 
-        console.log();
-
         priceProduct = parseFloat(priceProduct.replace(/\s/g, ''));
 
         if (basket[nameProduct]) {
@@ -106,8 +104,8 @@ export function generateBasketPage() {
           </div>
           <div class="basket__product-price"><span>${objProduct[item].price}</span>р.</div>
       </div>
-      <div class="basket__product-deleted"><img src="assets/img/page__basket/product__pannel/deleted.svg" alt="del">
-      </div>
+      <button class="basket__product-deleted"><img src="assets/img/page__basket/product__pannel/deleted.svg" alt="del">
+      </button>
     </div>
     
     `)
