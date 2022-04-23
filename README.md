@@ -14,8 +14,5 @@
 * SlickSlider
 * Gulp
 
-
-* API:
-
-** API DaData.ru (Autocomplete cities)
-** API C6V.RU (Delivery calculation)
+* API DaData.ru (Autocomplete cities)
+* API C6V.RU (Delivery calculation)
