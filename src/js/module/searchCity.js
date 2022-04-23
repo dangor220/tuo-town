@@ -30,7 +30,7 @@ export function searchCity() {
         let arrAdress = JSON.parse(result).suggestions;
 
         for (let item of arrAdress) {
-          cityList.textContent += item.value
+          cityList.innerHTML += `<li>${item.value}</li>`
         }
 
       })

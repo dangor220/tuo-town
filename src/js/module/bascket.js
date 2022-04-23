@@ -4,15 +4,26 @@ export function getBasket() {
   let sumProduct = 0;
 
   const catalog = document.querySelectorAll('.catalog__goods');
-  const basketIcon = document.querySelector('.user__icon-basket');
-  const basketItem = document.querySelector('.user__item-basket');
+  const basketIcon = document.querySelectorAll('.user__icon-basket');
+  const basketItem = document.querySelectorAll('.user__item-basket');
 
   window.addEventListener("load", function () {
     if (localStorage.getItem('basket') && localStorage.getItem('sumProductInBasket')) {
-      basketIcon.classList.add('user__icon_active');
-      basketItem.classList.add('user__item_active');
 
-      basketItem.textContent = localStorage.getItem('sumProductInBasket');
+      basketIcon.forEach(elem => {
+        elem.classList.add('user__icon_active');
+      })
+
+      basketItem.forEach(elem => {
+        elem.classList.add('user__item_active');
+        elem.textContent = localStorage.getItem('sumProductInBasket');
+      })
+
+
+      // basketIcon.classList.add('user__icon_active');
+      // basketItem.classList.add('user__item_active');
+
+      // basketItem.textContent = localStorage.getItem('sumProductInBasket');
 
       sumProduct = +localStorage.getItem('sumProductInBasket');
 
@@ -42,10 +53,16 @@ export function getBasket() {
 
         sumProduct += 1;
 
-        basketIcon.classList.add('user__icon_active');
-        basketItem.classList.add('user__item_active');
+        basketIcon.forEach(elem => {
+          elem.classList.add('user__icon_active');
+        })
+  
+        basketItem.forEach(elem => {
+          elem.classList.add('user__item_active');
+          elem.textContent = sumProduct;
+        })
 
-        basketItem.textContent = sumProduct;
+        // basketItem.textContent = sumProduct;
 
         let nameProduct = elem.querySelector('.catalog__goods-name').innerText;
         let priceProduct = elem.querySelector('.catalog__goods-value').textContent;
@@ -122,8 +139,8 @@ export function deletedProduct() {
       const basket = JSON.parse(localStorage.getItem('basket'));
       const nameDelProduct = elem.parentElement.querySelector('.basket__product-name').innerText;
 
-      const basketItem = document.querySelector('.user__item-basket');
-      const basketIcon = document.querySelector('.user__icon-basket');
+      const basketItem = document.querySelectorAll('.user__item-basket');
+      const basketIcon = document.querySelectorAll('.user__icon-basket');
 
 
       let newValue = basket[nameDelProduct].value;
@@ -134,12 +151,22 @@ export function deletedProduct() {
       localStorage.setItem('sumProductInBasket', newSumProduct);
 
       if (newSumProduct === 0) {
-        basketItem.classList.remove('user__item_active');
-        basketIcon.classList.remove('user__icon_active');
-        basketItem.textContent = '';
+
+        basketIcon.forEach(elem => {
+          elem.classList.remove('user__icon_active');
+        })
+  
+        basketItem.forEach(elem => {
+          elem.classList.remove('user__item_active');
+          elem.textContent = '';
+        })
+        
         localStorage.clear();
       } else {
-        basketItem.textContent = newSumProduct;
+
+        basketItem.forEach(elem => {
+          elem.textContent = newSumProduct;
+        })
       }
       delete basket[nameDelProduct];
 
@@ -160,7 +187,7 @@ export function deletedProduct() {
 
 export function addOrDelProduct() {
 
-  const basketItem = document.querySelector('.user__item-basket');
+  const basketItem = document.querySelectorAll('.user__item-basket');
 
 
 
@@ -191,7 +218,10 @@ export function addOrDelProduct() {
 
       priceValue.innerHTML = `${basketLocal[nameProduct].priceOneProduct * basketLocal[nameProduct].value} <span>р.</span>`;
 
-      basketItem.textContent = localStorage.getItem('sumProductInBasket');
+
+      basketItem.forEach(elem => {
+        elem.textContent = localStorage.getItem('sumProductInBasket');
+      })
 
       elem.parentElement.querySelector('.basket__product-count').textContent = basketLocal[nameProduct].value;
 
@@ -222,7 +252,10 @@ export function addOrDelProduct() {
 
 
       localStorage.setItem('sumProductInBasket', valueSum + 1);
-      basketItem.textContent = localStorage.getItem('sumProductInBasket');
+      basketItem.forEach(elem => {
+        elem.textContent = localStorage.getItem('sumProductInBasket');
+      })
+      
 
       elem.parentElement.querySelector('.basket__product-count').textContent = basketLocal[nameProduct].value;
 
@@ -231,7 +264,9 @@ export function addOrDelProduct() {
 
       priceValue.innerHTML = `${basketLocal[nameProduct].priceOneProduct * basketLocal[nameProduct].value} <span>р.</span>`;
 
-      basketItem.textContent = localStorage.getItem('sumProductInBasket');
+      basketItem.forEach(elem => {
+        elem.textContent = localStorage.getItem('sumProductInBasket');
+      })
 
       elem.parentElement.querySelector('.basket__product-count').textContent = basketLocal[nameProduct].value;
 

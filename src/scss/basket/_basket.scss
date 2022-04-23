@@ -9,8 +9,107 @@
     margin: 0 auto;
   }
 
+  // .basket__info-delivery
+  &__info-delivery {
+    display: flex;
+    justify-content: space-between;
+  }
+  // .basket__delivery
+  &__delivery {
+    display: flex;
+    align-items: center;
+  }
+  // .basket__info-image
+  &__info-image {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-right: 15px;
+
+    background: #232323;
+    border-radius: 15px;
+
+    width: 80px;
+    height: 80px;
+  }
+  // .basket__image
+  &__image {
+    padding: 22px 22px;
+  }
+  // .basket__info
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 340px;
+  }
+  // .basket__title
+  &__title {
+    font-family: 'Jura';
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+
+    color: #FFFFFF;
+
+    margin-bottom: 12px;
+    & span {
+      padding-bottom: 4px;
+      border-bottom: 2px solid #ED0C0C;
+    }
+    
+  }
+  // .basket__subtitle
+  &__subtitle {
+    display: flex;
+    flex-direction: column;
+      & button {
+             text-align: start;
+            background-color: transparent;
+
+            font-family: 'Montserrat';
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 140%;
+
+            color: #ADACAC;
+            transition: all 0.3s linear;
+
+            &:hover {
+              color: #e4e4e4;
+            }
+          }
+  }
+  // .basket__city
+  &__city {
+  }
+  &__delivery-date {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 140%;
+
+    color: #ADACAC;
+    transition: all 0.3s linear;
+    height: 20px;
+  }
+
+  // .basket__pay
+  &__pay {
+  }
+  
+  // .basket__payment
+  &__payment {
+    display: flex;
+    align-items: center;
+  }
+
+
   // .basket__content
   &__content {
+    margin-bottom: 30px;
     
 
     & .basket__back {
