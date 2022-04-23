@@ -36,7 +36,6 @@ export function selectCity() {
         .then(response => response.text())
         .then(result => {
           let res = JSON.parse(result)[0].days.split('');
-          console.log(res);
 
           let currentDate = new Date();
 
