@@ -28,7 +28,7 @@ export function selectCity() {
       }
 
       let KEY = '20f88c305b34fe3df670fb5c19c76ef90981cab4';
-      let url = `http://api.c6v.ru/?key=${KEY}&q=getPrice&startCity=Москва&endCity=${city}&weight=50&width=50&height=50&length=50`;
+      let url = `https://api.c6v.ru/?key=${KEY}&q=getPrice&startCity=Москва&endCity=${city}&weight=50&width=50&height=50&length=50`;
       const arrive = document.querySelector('.basket__delivery-date');
       arrive.innerHTML = '';
 
