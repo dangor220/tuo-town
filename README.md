@@ -1,6 +1,6 @@
 # TuoTown
 
-## https://dangor220.github.io/TuoTown/dist/
+## https://dangor220.github.io/tuo-town/dist/
 
 
 ### Development of a multi-page site TuoTown
